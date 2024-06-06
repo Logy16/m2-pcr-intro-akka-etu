@@ -15,7 +15,7 @@ public class System {
         final ActorSystem actorSystem = ActorSystem.create("actor-system");
 
         ActorRef filterActor = actorSystem.actorOf(Props.create(FilterActor.class,2), "filter-actor");
-        int N = 20;
+        int N = 50;
 
         Thread.sleep(5000);
 
@@ -25,7 +25,7 @@ public class System {
 
         Thread.sleep(1000);
 
-        log.debug("Actor System Shutdown Starting...");
+        log.debug("Actor System Shutdown...");
 
         actorSystem.terminate();
     }
